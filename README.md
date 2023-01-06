@@ -10,18 +10,12 @@ You can find the original here: https://github.com/john42/GibberishDetector-CFC
 This gibberish detector is not limmited to a certain language, and can be trained on files by the user's choice.
 
 # How to use this library?
-Use GibberishDetectorFactory in order to create a new instance of the gibberish detector.
-You should supply it the following inputs:
-- A big text file in the language of your choice for training.
-- A small text file with correct sentences.
-- A small text file with gibberish sentences.
-- A string containing the alphaBet of that language plus a space character.
-You can pass the files' data as lists of string, java file objects, paths of the files, or the names of local files.
-The factory instantiates a new GibberishDetector object that is trained by this input.
+Creating an instance of GibberishDetector.cfc will load the default pre-built configuration based on the supplied training files.
+The default configuration is loaded from the Gibberish.json file but a different configuration can be loaded from any json file.
 Use the 'isGibberish' method in order to determine if a sentence is gibberish or not.
 
 If you wish to select your own heuristic for setting the thrshold to classify sentences, you can override the method 'getThreshold'
-and implement it yourself. The factory can create instances of detectors that extend GibberishDetector.
+and implement it yourself.
 
 # Content
 Coldfusion files:
