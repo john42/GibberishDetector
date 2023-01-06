@@ -27,7 +27,7 @@ Coldfusion files:
 - Index.cfm - Small one page application that allows testing and generation of the pre-build settings.
 - Application.cfc - Base bones Application object to persist object instance for testing and avoid loading each test run.
 
-text files:
+Text files:
 - big.txt, good.txt, bad.txt - text files used as inputs to train for english gibberish detector. Enhanced files from original.
 
 
