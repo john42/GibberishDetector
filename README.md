@@ -17,11 +17,15 @@ Use the 'isGibberish' method in order to determine if a sentence is gibberish or
 If you wish to select your own heuristic for setting the thrshold to classify sentences, you can override the method 'getThreshold'
 and implement it yourself.
 
+A small single page app is provided, index.cfm, that allows you to
+- Test the gibberish detector
+- Generate new JSON configuration based on training files
+
 # Content
 Coldfusion files:
-- GibberishDetector.cfc - The core object that handles all functionality
-- Index.cfm - Small one page application that allows testing and generation of the pre-build settings
-- Application.cfc - Base bones Application object to persist object instance for testing
+- GibberishDetector.cfc - The core object that handles all functionality.
+- Index.cfm - Small one page application that allows testing and generation of the pre-build settings.
+- Application.cfc - Base bones Application object to persist object instance for testing and avoid loading each test run.
 
 text files:
 - big.txt, good.txt, bad.txt - text files used as inputs to train for english gibberish detector. Enhanced files from original.
